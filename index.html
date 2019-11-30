@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ギャルゲ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="app">
+    <selectbox :item1="item1" :item2="item2" v-if="selecting"></selectbox>
+    <div id="wrapper" @click="onTap()">
+      <messagebox :talker="talker" :message="message"></messagebox>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./scenario.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
