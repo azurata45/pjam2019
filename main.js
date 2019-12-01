@@ -59,8 +59,8 @@ var vm = new Vue({
     },
     setBack: function(bgNum) {
       switch (bgNum) {
-        case 0: // 黒背景
-          this.backgroundSource = "black";
+        case 100: // 黒背景
+          this.backgroundSource = "url(./assets/black.png)";
           break;
         case 1: // しゅりの部屋(カーテン閉)
           this.backgroundSource = "url(./assets/shuri-room-closed.jpg)";
@@ -68,6 +68,17 @@ var vm = new Vue({
         case 2: // しゅりの部屋(カーテン開)
           this.backgroundSource = "url(./assets/shuri-room-opened.jpg)";
           break;
+        case 3: // 首里城
+          this.backgroundSource = "url(./assets/shuri-castle.jpg)";
+          break;
+        case 4: // 正門
+          this.backgroundSource = "url(./assets/school-gate.png)";
+          break;
+        case 5: // 校長室
+          this.backgroundSource = "url(./assets/principals-room.jpg)";
+          break;
+        case 6: // 教室
+          this.backgroundSource = "url(./assets/classroom.jpg)";
       }
     }
   },
