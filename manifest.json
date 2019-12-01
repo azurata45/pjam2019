@@ -1,9 +1,16 @@
 {
-  "name":"鬼夜酢流しゅり物語",
-  "short_name":"鬼夜酢流しゅり物語",
+  "name":"首里城を守るために!",
+  "short_name":"首里城を守るために!",
   "start_url":"title.html",
   "display":"standalone",
   "description":"PARADISE JAM 2019でチーム「MIRoir」が作成したプログラム",
-  "background_color":"cyan",
-  ​​"orientation": "natural"
+  "background_color":"#000000",
+  ​​"orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./assets/icon.png",
+      "type":"image/png",
+      "sizes":"192x192"
+    }
+  ]
 }
