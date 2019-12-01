@@ -1,8 +1,8 @@
 {
   "name":"鬼夜酢流しゅり物語",
   "short_name":"鬼夜酢流しゅり物語",
-  "start_url":".",
-  "display":"fullscreen",
+  "start_url":"index.html",
+  "display":"standalone",
   "description":"PARADISE JAM 2019でチーム「MIRoir」が作成したプログラム",
   "background_color":"cyan",
   ​​"orientation": "natural"
