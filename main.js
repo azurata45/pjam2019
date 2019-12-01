@@ -18,11 +18,15 @@ var vm = new Vue({
     selecting: false,
     item1: "",
     item2: "",
-    backgroundSource: "black",
+    backgroundSource: "black"
   },
   created: function() {
+    this.selecting = false;
     this.talker = scenario[this.section].talks[this.index].talker;
     this.message = scenario[this.section].talks[this.index].content;
+    if (scenario[this.section].talks[this.index].background) {
+      this.setBack(scenario[this.section].talks[this.index].background);
+    }
   },
   methods: {
     indexNext: function() {
@@ -34,8 +38,7 @@ var vm = new Vue({
       this.index = 0;
     },
     selectItem1: function() {
-      switch(this.section)
-      {
+      switch (this.section) {
         case 0:
           this.changeSection(1);
           break;
@@ -45,8 +48,7 @@ var vm = new Vue({
       }
     },
     selectItem2: function() {
-      switch(this.section)
-      {
+      switch (this.section) {
         case 0:
           this.changeSection(2);
           break;
@@ -55,14 +57,16 @@ var vm = new Vue({
           break;
       }
     },
-    setBG: function (bgNum) {
-      switch(bgNum)
-      {
+    setBack: function(bgNum) {
+      switch (bgNum) {
         case 0: // 黒背景
           this.backgroundSource = "black";
           break;
-        case 1:
-          this.backgroundSource = "white";
+        case 1: // しゅりの部屋(カーテン閉)
+          this.backgroundSource = "url(./assets/shuri-room-closed.jpg)";
+          break;
+        case 2: // しゅりの部屋(カーテン開)
+          this.backgroundSource = "url(./assets/shuri-room-opened.jpg)";
           break;
       }
     }
@@ -73,6 +77,9 @@ var vm = new Vue({
         this.selecting = false;
         this.talker = scenario[this.section].talks[this.index].talker;
         this.message = scenario[this.section].talks[this.index].content;
+        if (scenario[this.section].talks[this.index].background) {
+          this.setBack(scenario[this.section].talks[this.index].background);
+        }
       } else {
         this.selecting = true;
         this.item1 = scenario[this.section].talks[this.index].content[0];

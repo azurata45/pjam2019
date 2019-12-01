@@ -13,7 +13,7 @@ var scenario = [
   /* 0 */
   {
     talks: [
-      {talker:"- 場面 -", content:"このゲームの主人公、しゅりの部屋"},
+      {talker:"- 場面 -", content:"このゲームの主人公、しゅりの部屋", background:1},
       {talker:"？？？", content:"「......きて..."},
       {talker:"？？？", content:"「..起きて！朝よ！」"},
       {talker:"お母さん", content:"「しゅり！！"},
@@ -40,7 +40,7 @@ var scenario = [
     talks: [
       /*-- しゅりの部屋 --*/
       {talker:"しゅり"       , content:"「うん、開けてほしいかな。」"},
-      {talker:"ナレーション"  , content:"そう答えるとお母さんがカーテンを開けてくれた。"},
+      {talker:"ナレーション"  , content:"そう答えるとお母さんがカーテンを開けてくれた。", background:2},
       {talker:"しゅり"       , content:"「......やっぱりゆめじゃなかったんだ。」"},
       {talker:"ナレーション"  , content:"カーテンを開けるといつもなら城下町を見守るようにあったはずの首里城の場所には、"},
       {talker:"ナレーション"  , content:"黒く焼けた首里城の残骸しかなく、あのきれいな首里城は見る影もなかった。"},
