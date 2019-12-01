@@ -10,7 +10,7 @@
 
 <body>
   <div id="app">
-    <div id="select-wrapper">
+    <div id="select-wrapper" @click="indexNext()">
       <div id="selectbox" v-show="selecting">
         <div class="item" @click="selectItem1()">{{ item1 }}</div>
         <div class="item" @click="selectItem2()">{{ item2 }}</div>
