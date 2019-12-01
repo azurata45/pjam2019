@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>ギャルゲ</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <title>ギャルゲ</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-  <div id="app">
-    <div id="select-wrapper" @click="indexNext()">
-      <div id="selectbox" v-show="selecting">
-        <div class="item" @click="selectItem1()">{{ item1 }}</div>
-        <div class="item" @click="selectItem2()">{{ item2 }}</div>
+  <body>
+    <div id="app">
+      <div id="wrapper" @click="indexNext()" :style="{ background: backgroundSource }">
+        <div id="select-wrapper">
+          <div id="selectbox" v-show="selecting">
+            <div class="item" @click="selectItem1()">{{ item1 }}</div>
+            <div class="item" @click="selectItem2()">{{ item2 }}</div>
+          </div>
+        </div>
+        <div id="talk-wrapper">
+          <messagebox :talker="talker" :message="message"></messagebox>
+        </div>
       </div>
     </div>
-    <div id="talk-wrapper" @click="indexNext()">
-      <messagebox :talker="talker" :message="message"></messagebox>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="./scenario.js"></script>
-  <script src="./main.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./scenario.js"></script>
+    <script src="./main.js"></script>
+  </body>
 </html>

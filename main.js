@@ -18,6 +18,7 @@ var vm = new Vue({
     selecting: false,
     item1: "",
     item2: "",
+    backgroundSource: "black",
   },
   created: function() {
     this.talker = scenario[this.section].talks[this.index].talker;
@@ -54,6 +55,17 @@ var vm = new Vue({
           break;
       }
     },
+    setBG: function (bgNum) {
+      switch(bgNum)
+      {
+        case 0: // 黒背景
+          this.backgroundSource = "black";
+          break;
+        case 1:
+          this.backgroundSource = "white";
+          break;
+      }
+    }
   },
   watch: {
     index: function(newIndex, oldIndex) {
