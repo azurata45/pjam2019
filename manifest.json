@@ -5,7 +5,7 @@
   "display":"standalone",
   "description":"PARADISE JAM 2019でチーム「MIRoir」が作成したプログラム",
   "background_color":"#000000",
-  ​​"orientation": "portrait-primary",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "./assets/icon.png",
